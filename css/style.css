@@ -1,0 +1,126 @@
+@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.css");
+
+@font-face {
+    font-family: K2D-Bold;
+    src: url("../assets/K2D-Bold.ttf");
+}
+@font-face {
+    font-family: K2D-Light;
+    src: url("../assets/K2D-Light.ttf");
+}
+body{
+    font-family: K2D-Bold;
+    background-color: #1B1E2E;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 3%;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-inline: 30px;
+}
+
+.me{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 10%;
+}
+
+.me p{
+    font-family: K2D-Light !important;
+    font-size: 16px;
+}
+
+.me h1{
+    margin: 0;
+    font-size: 2.5vw;
+}
+
+.me h2{
+    margin: 0;
+    font-size: 1.8vw;
+}
+
+.line {
+    position: relative;
+    width: 0px;
+    margin: auto;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*Animação*/
+.anim-typewriter {
+    animation: typewriter 5s steps(9) 1000ms infinite,
+    blinkTextCursor 1000ms steps(9) infinite normal;
+    color:#00ECD0;
+    text-shadow: #00ECD0 1px 0 7px;
+}
+@keyframes typewriter {
+    0% {
+          width: 0;
+          margin-left: 10px;
+    }
+    10% {
+          width: 0px;
+    }
+    25% {
+          width: 240px;
+    }
+    75% {
+          width: 240px;
+    }
+    90% {
+          width: 0px;
+    }
+    100% {
+          width: 0px;
+          margin-left: 10px;
+    }
+}
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+          border-right-color: transparent;
+    }
+}
+
+i{
+    color:#00ECD0;
+    font-size: 30px;
+    margin-inline: 10px;
+    cursor: pointer;
+}
+
+i:hover{
+    text-shadow: #00ECD0 1px 0 7px;
+}
+
+.downloadBtn{
+    margin-left: 10px;
+    background-color: #00ECD0;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.downloadBtn:hover{
+    box-shadow:#00ECD0 1px 0 7px;
+}
