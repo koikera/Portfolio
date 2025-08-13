@@ -1,0 +1,47 @@
+.text-primary{
+    color: #4E1AA2 !important;
+}
+
+.bg-secondary{
+    background-color: #4E1AA2 !important;
+}
+.btn-primary{
+    background-color: #4E1AA2 !important;
+    border: none !important;
+}
+
+.github:hover, .linkedin:hover {
+  text-shadow: 0 0 8px #4E1AA2;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+.blinking-cursor {
+  animation: blink 1s step-start infinite;
+  font-weight: bold; /* opcional para deixar mais visível */
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 15px 5px #4E1AA2;
+  transition: box-shadow 0.3s ease;
+
+}
+
+/* Transição suave para o background */
+.transition-bg {
+  transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+  background-color: #141414 !important;
+  transition: background-color 0.3s ease;
+}

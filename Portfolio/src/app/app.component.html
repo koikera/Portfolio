@@ -1,0 +1,136 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent px-5 fixed-top" id="navbar" >
+  <div class="container-fluid">
+    <a class="navbar-brand fs-5" href="#">PORTFOLIO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light fs-6 p-3" href="#home">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fs-6 p-3" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fs-6 p-3" href="#">PROJECTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fs-6 p-3" href="#">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="mt-5 container text-light" id="home">
+  <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-md-start">
+    <img src="Eu.png" alt="" class="order-first order-md-last mb-3 mb-md-0 animate-item" #animateItem style="max-width: 100%; height: auto;">
+
+    <div class="d-flex flex-column w-100 w-md-50 order-last order-md-first animate-item" #animateItem>
+      <p class="fs-2 mb-0 fw-bold">Hello It's Me</p>
+      <p class="fs-1 mb-0 fw-bold">Matheus Comelli</p>
+      <p class="fs-1 mb-0 fw-bold">
+        And I'm a <span class="text-primary">{{job_text}} <span class="blinking-cursor">|</span></span>
+      </p>
+      <p class="fs-6">
+        Lorem ipsum dolor sit amet consectetur. Lacinia in hac ac sit. Lacus dictumst leo vitae at volutpat pellentesque platea. Diam eget pellentesque elit aliquam tristique interdum turpis. Neque lorem at vitae quam nunc vel consequat.
+      </p>
+      <div class="d-flex justify-content-center justify-content-md-start">
+        <i class="bi bi-github fs-2 mx-3 text-primary github animate-item" #animateItem></i>
+        <i class="bi bi-linkedin fs-2 mx-3 text-primary linkedin animate-item" #animateItem></i>
+        <button class="btn btn-primary mx-3 btn-bright animate-item" #animateItem>Download CV</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-md-0 mt-3" style="background-color: #0E0E25; width: 100vw;" id="about">
+  <div class="container d-flex flex-column justify-content-center pb-5">
+    <p class="fw-bold text-light fs-2 text-center w-100 animate-item" #animateItem>
+      About <span class="text-primary">Me</span>
+    </p>
+    <p class="fw-bold fs-4 text-center text-light mb-5 animate-item" #animateItem>
+      I'm passionate about programming. I started at the age of 14, developing games and websites, and I've been building various applications ever since.
+    </p>
+
+    <div class="row justify-content-center text-start flex-column flex-md-row align-items-stretch">
+      
+      <!-- Coluna Education -->
+      <div class="col-12 col-md-4 ps-md-5 mb-4 mb-md-0 d-flex flex-column order-md-1 animate-item" #animateItem>
+        <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Education</p>
+
+        <div class="mb-4" *ngFor="let education of educations" class="animate-item" #animateItem>
+          <p class="fw-bold fs-4 text-light mb-1">
+            {{education.title}} - {{education.location}} <br>
+            {{education.date}}
+          </p>
+          <p class="text-light">
+            {{education.description}}
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Divisor vertical -->
+      <div class="d-none d-md-flex col-md-1 justify-content-center order-md-2 animate-item" #animateItem>
+        <div class="bg-light" style="width:2px; height:100%;"></div>
+      </div>
+
+      <!-- Coluna Experience -->
+      <div class="col-12 col-md-4 ps-md-5 d-flex flex-column order-md-3 animate-item" #animateItem>
+        <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Experience</p>
+
+        <div class="mb-4" *ngFor="let experience of experiences" class="animate-item" #animateItem>
+          <p class="fw-bold fs-4 text-light mb-1">
+            {{experience.title}} - {{experience.location}} <br>
+            {{experience.date}}
+          </p>
+          <p class="text-light">
+            {{experience.description}}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr style="border-top: 2px solid #fff;" class="text-light animate-item" #animateItem />
+
+    <div class="row justify-content-center text-start flex-column flex-md-row align-items-stretch">
+      
+      <!-- Coluna Language -->
+      <div class="col-12 col-md-4 ps-md-5 mb-4 mb-md-0 d-flex flex-column order-md-1 animate-item" #animateItem>
+        <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Language</p>
+
+        <ul>
+          <li *ngFor="let language of languages" class="text-light fs-5 animate-item" #animateItem>
+            {{language.type}}
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Divisor vertical -->
+      <div class="d-none d-md-flex col-md-1 justify-content-center order-md-2 animate-item" #animateItem>
+        <div class="bg-light" style="width:2px; height:100%;"></div>
+      </div>
+
+      <!-- Coluna Expertise -->
+      <div class="col-12 col-md-4 ps-md-5 d-flex flex-column order-md-3 animate-item" #animateItem>
+        <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Expertises</p>
+
+        <ul>
+          <li *ngFor="let expertise of expertises" class="text-light fs-5 animate-item" #animateItem>
+            {{expertise.type}}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>
