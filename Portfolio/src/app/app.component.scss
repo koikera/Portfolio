@@ -45,3 +45,40 @@
   background-color: #141414 !important;
   transition: background-color 0.3s ease;
 }
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(78, 26, 162, 0.4);
+}
+
+.project-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-badge {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.35em 0.75em;
+  border-radius: 20px;
+  user-select: none;
+}
+
+.project-description {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.project-description.show-description {
+  max-height: 500px; /* espaço suficiente para o conteúdo */
+  opacity: 1;
+  overflow: visible;
+}

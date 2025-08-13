@@ -14,10 +14,10 @@
           <a class="nav-link text-light fs-6 p-3" href="#about">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light fs-6 p-3" href="#">PROJECTS</a>
+          <a class="nav-link text-light fs-6 p-3" href="#projects">PROJECTS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light fs-6 p-3" href="#">CONTACT</a>
+          <a class="nav-link text-light fs-6 p-3" href="#contact">CONTACT</a>
         </li>
       </ul>
     </div>
@@ -38,8 +38,12 @@
         Lorem ipsum dolor sit amet consectetur. Lacinia in hac ac sit. Lacus dictumst leo vitae at volutpat pellentesque platea. Diam eget pellentesque elit aliquam tristique interdum turpis. Neque lorem at vitae quam nunc vel consequat.
       </p>
       <div class="d-flex justify-content-center justify-content-md-start">
-        <i class="bi bi-github fs-2 mx-3 text-primary github animate-item" #animateItem></i>
-        <i class="bi bi-linkedin fs-2 mx-3 text-primary linkedin animate-item" #animateItem></i>
+        <a href="https://github.com/koikera" target="_blank" rel="noopener noreferrer" class="text-primary">
+          <i class="bi bi-github fs-2 mx-3 text-primary github animate-item" #animateItem></i>
+        </a>
+        <a href="https://linkedin.com/in/matheuskoike" target="_blank" rel="noopener noreferrer" class="text-primary">
+          <i class="bi bi-linkedin fs-2 mx-3 text-primary linkedin animate-item" #animateItem></i>
+        </a>
         <button class="btn btn-primary mx-3 btn-bright animate-item" #animateItem>Download CV</button>
       </div>
     </div>
@@ -129,6 +133,76 @@
 
       </div>
 
+    </div>
+  </div>
+</section>
+<section class="mt-3 mb-5 container text-light" id="projects" #animateItem>
+  <div class="text-center mb-5 animate-item" #animateItem>
+    <h2 class="fw-bold fs-2">
+      My <span class="text-primary">Projects</span>
+    </h2>
+  </div>
+
+  <div class="row gy-4">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let project of projects; let i = index">
+      <div class="project-card card bg-dark text-light h-100 shadow-sm rounded-4">
+        <div class="card-body d-flex flex-column">
+          <!-- Imagem ou ícone -->
+          <div class="project-icon mb-3 text-primary">
+            <i class="bi bi-code-slash fs-1"></i>
+          </div>
+
+          <h5 class="card-title fw-semibold">{{ project.title }}</h5>
+
+          <div class="mb-3">
+            <span *ngFor="let tech of project.techStack" class="badge bg-primary tech-badge me-2 d-inline-flex align-items-center">
+              <i [class]="tech.icon + ' me-1'" style="font-size: 1rem;"></i> {{ tech.name }}
+            </span>
+          </div>
+
+          <button class="btn btn-outline-light btn-sm mt-auto" (click)="toggleDescription(i)">
+            {{ openedProjectIndex === i ? 'Hide Details' : 'View Details' }}
+          </button>
+
+          <div [class.show-description]="openedProjectIndex === i" class="project-description mt-3">
+            <p>{{ project.description }}</p>
+            <a *ngIf="project.link" [href]="project.link" target="_blank" class="btn btn-primary btn-sm mt-2">
+              Visit Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-md-0 mt-5 py-5" style="background-color: #0E0E25; width: 100vw;" id="contact">
+  <div class="container text-light">
+    <h2 class="fw-bold fs-2 text-center mb-5 animate-item" #animateItem>
+      Get in <span class="text-primary">Touch</span>
+    </h2>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 text-center">
+        <p class="fs-5 mb-4">
+          Thanks for reading my portfolio!<br />
+          Feel free to reach out to me on 
+          <a href="https://linkedin.com/in/matheuskoike" target="_blank" rel="noopener noreferrer" class="text-primary fw-bold">
+            LinkedIn
+          </a>.
+        </p>
+
+        <div class="mt-4">
+          <a href="mailto:matheuscomelli@hotmail.com" target="_blank" rel="noopener noreferrer" class="text-primary mx-3">
+            <i class="bi bi-envelope fs-2 github animate-item"></i>
+          </a>
+          <a href="https://github.com/koikera" target="_blank" rel="noopener noreferrer" class="text-primary mx-3">
+            <i class="bi bi-github fs-2 github animate-item"></i>
+          </a>
+          <a href="https://linkedin.com/in/matheuskoike" target="_blank" rel="noopener noreferrer" class="text-primary mx-3">
+            <i class="bi bi-linkedin fs-2 linkedin animate-item"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

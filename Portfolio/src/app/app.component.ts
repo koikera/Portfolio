@@ -18,19 +18,29 @@ export class AppComponent implements OnInit, AfterViewInit {
   public job_text: string = '';
   public job_list: string[] = [];
   public experiences: Experience[] = [
-     {
-        title: 'Junior Full Stack',
-        location: 'Brazil',
-        date: '2021 - 2024',
-        description: 'I was responsible for training young apprentices and spearheading the creation of several portals. I was recognized for consistently delivering high-quality project outcomes.'
-      },
-      {
-        title: 'Another Job Title',
-        location: 'Location',
-        date: '2019 - 2021',
-        description: 'Description of responsibilities and achievements in this job.'
-      }
-  ]
+    {
+      title: 'Young Apprentice – Governance',
+      location: 'Tivit, Brazil',
+      date: '2019 - 2021',
+      description: `Handled governance manual processes and daily spreadsheet updates. 
+      Proposed and developed a Power Apps & Power Automate solution to digitize the analyst recognition process, 
+      integrating it with Power BI and eliminating a manual paper-based system. 
+      Collaborated on a Data Lake project to automate governance workflows using Python for ELT pipelines 
+      (ITSM API → AWS S3 → BI dashboards).`
+    },
+    {
+      title: 'Junior Full Stack Developer',
+      location: 'Tivit, Brazil',
+      date: '2021 - Present',
+      description: `Initially maintained and modernized a legacy communication portal, 
+      redesigning it with .NET 5, Angular 12, and Microsoft Teams/WhatsApp APIs after Kaizala deprecation. 
+      Led the development of a WhatsApp webhook service in .NET 6 with Clean Architecture and Docker, 
+      and contributed to a Zabbix management platform using Python, Angular, and Docker. 
+      Currently focused on maintaining and improving existing projects, 
+      migrating legacy .NET systems to the updated stack, 
+      and leading the redevelopment of the communication portal.`
+    }
+  ];
   public educations: Education[] = [
     {
         title: 'UNIP University - Brazil',
@@ -124,7 +134,48 @@ typeDeleteEffect() {
     }
   }
 
+projects = [
+  {
+    title: 'Project One',
+    techStack: [
+      { name: 'Angular', icon: 'devicon-angularjs-plain' },
+      { name: 'Bootstrap', icon: 'devicon-bootstrap-plain' }
+    ],
+    description: 'A sleek portfolio site showcasing my skills and projects with responsive design and animations.',
+    link: 'https://github.com/username/project-one'
+  },
+  {
+    title: 'Project Two',
+    techStack: [
+      { name: 'Node.js', icon: 'devicon-nodejs-plain' },
+      { name: 'Express', icon: 'devicon-express-original' },
+      { name: 'MongoDB', icon: 'devicon-mongodb-plain' }
+    ],
+    description: 'Backend API for a task management app with JWT authentication and real-time updates.',
+    link: 'https://github.com/username/project-two'
+  },
+  {
+    title: 'Project Three',
+    techStack: [
+      { name: 'React', icon: 'devicon-react-original' },
+      { name: 'Redux', icon: 'devicon-redux-original' },
+      { name: 'TailwindCSS', icon: 'devicon-tailwindcss-plain' }
+    ],
+    description: 'E-commerce frontend with product filters, cart functionality and smooth user experience.',
+    link: ''
+  }
+];
 
+
+  openedProjectIndex: number | null = null;
+
+  toggleDescription(index: number) {
+    if (this.openedProjectIndex === index) {
+      this.openedProjectIndex = null;
+    } else {
+      this.openedProjectIndex = index;
+    }
+  }
 
 
 }
