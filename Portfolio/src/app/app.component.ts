@@ -5,10 +5,12 @@ import { Experience } from './models/experience';
 import { Education } from './models/education';
 import { Language } from './models/language';
 import { Expertise } from './models/expertise';
+import { ScrollAnimateDirective } from './directives/scroll-animate.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  standalone: true,
+  imports: [RouterOutlet, CommonModule, ScrollAnimateDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

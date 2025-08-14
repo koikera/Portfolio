@@ -26,46 +26,73 @@
 
 <section class="mt-5 container text-light" id="home">
   <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center text-center text-md-start">
-    <img src="Eu.png" alt="" class="order-first order-md-last mb-3 mb-md-0 animate-item" #animateItem style="max-width: 100%; height: auto;">
 
-    <div class="d-flex flex-column w-100 w-md-50 order-last order-md-first animate-item" #animateItem>
-      <p class="fs-2 mb-0 fw-bold">Hello It's Me</p>
-      <p class="fs-1 mb-0 fw-bold">Matheus Comelli</p>
-      <p class="fs-1 mb-0 fw-bold">
+    <!-- Imagem -->
+    <img src="Eu.png" alt="" 
+         class="order-first order-md-last mb-3 mb-md-0 animate-item"
+         appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2"
+         style="max-width: 100%; height: auto;">
+
+    <div class="d-flex flex-column w-100 w-md-50 order-last order-md-first animate-item"
+         appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
+
+      <p class="fs-2 mb-0 fw-bold" appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
+        Hello It's Me
+      </p>
+      <p class="fs-1 mb-0 fw-bold" appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
+        Matheus Comelli
+      </p>
+      <p class="fs-1 mb-0 fw-bold" appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         And I'm a <span class="text-primary">{{job_text}} <span class="blinking-cursor">|</span></span>
       </p>
-      <p class="fs-6">
+      <p class="fs-6" appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         Lorem ipsum dolor sit amet consectetur. Lacinia in hac ac sit. Lacus dictumst leo vitae at volutpat pellentesque platea. Diam eget pellentesque elit aliquam tristique interdum turpis. Neque lorem at vitae quam nunc vel consequat.
       </p>
+
       <div class="d-flex justify-content-center justify-content-md-start">
-        <a href="https://github.com/koikera" target="_blank" rel="noopener noreferrer" class="text-primary">
-          <i class="bi bi-github fs-2 mx-3 text-primary github animate-item" #animateItem></i>
+        <a href="https://github.com/koikera" target="_blank" rel="noopener noreferrer" 
+           class="text-primary">
+          <i class="bi bi-github fs-2 mx-3 text-primary github animate-item" 
+             appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2"></i>
         </a>
-        <a href="https://linkedin.com/in/matheuskoike" target="_blank" rel="noopener noreferrer" class="text-primary">
-          <i class="bi bi-linkedin fs-2 mx-3 text-primary linkedin animate-item" #animateItem></i>
+        <a href="https://linkedin.com/in/matheuskoike" target="_blank" rel="noopener noreferrer" 
+           class="text-primary">
+          <i class="bi bi-linkedin fs-2 mx-3 text-primary linkedin animate-item" 
+             appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2"></i>
         </a>
-        <button class="btn btn-primary mx-3 btn-bright animate-item" #animateItem>Download CV</button>
+        <button class="btn btn-primary mx-3 btn-bright animate-item" 
+                appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
+          Download CV
+        </button>
       </div>
+
     </div>
   </div>
 </section>
 
+
 <section class="mt-md-0 mt-3" style="background-color: #0E0E25; width: 100vw;" id="about">
   <div class="container d-flex flex-column justify-content-center pb-5">
-    <p class="fw-bold text-light fs-2 text-center w-100 animate-item" #animateItem>
+
+    <!-- Títulos -->
+    <p class="fw-bold text-light fs-2 text-center w-100 animate-item" 
+       appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
       About <span class="text-primary">Me</span>
     </p>
-    <p class="fw-bold fs-4 text-center text-light mb-5 animate-item" #animateItem>
+    <p class="fw-bold fs-4 text-center text-light mb-5 animate-item" 
+       appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
       I'm passionate about programming. I started at the age of 14, developing games and websites, and I've been building various applications ever since.
     </p>
 
     <div class="row justify-content-center text-start flex-column flex-md-row align-items-stretch">
       
       <!-- Coluna Education -->
-      <div class="col-12 col-md-4 ps-md-5 mb-4 mb-md-0 d-flex flex-column order-md-1 animate-item" #animateItem>
+      <div class="col-12 col-md-4 ps-md-5 mb-4 mb-md-0 d-flex flex-column order-md-1 animate-item" 
+           appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Education</p>
 
-        <div class="mb-4" *ngFor="let education of educations" class="animate-item" #animateItem>
+        <div class="mb-4" *ngFor="let education of educations" 
+             appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
           <p class="fw-bold fs-4 text-light mb-1">
             {{education.title}} - {{education.location}} <br>
             {{education.date}}
@@ -74,19 +101,21 @@
             {{education.description}}
           </p>
         </div>
-
       </div>
 
       <!-- Divisor vertical -->
-      <div class="d-none d-md-flex col-md-1 justify-content-center order-md-2 animate-item" #animateItem>
+      <div class="d-none d-md-flex col-md-1 justify-content-center order-md-2 animate-item" 
+           appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         <div class="bg-light" style="width:2px; height:100%;"></div>
       </div>
 
       <!-- Coluna Experience -->
-      <div class="col-12 col-md-4 ps-md-5 d-flex flex-column order-md-3 animate-item" #animateItem>
+      <div class="col-12 col-md-4 ps-md-5 d-flex flex-column order-md-3 animate-item" 
+           appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Experience</p>
 
-        <div class="mb-4" *ngFor="let experience of experiences" class="animate-item" #animateItem>
+        <div class="mb-4" *ngFor="let experience of experiences" 
+             appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
           <p class="fw-bold fs-4 text-light mb-1">
             {{experience.title}} - {{experience.location}} <br>
             {{experience.date}}
@@ -95,51 +124,58 @@
             {{experience.description}}
           </p>
         </div>
-
       </div>
 
     </div>
 
-    <hr style="border-top: 2px solid #fff;" class="text-light animate-item" #animateItem />
+    <hr style="border-top: 2px solid #fff;" class="text-light" 
+        appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" />
 
+    <!-- Language & Expertise -->
     <div class="row justify-content-center text-start flex-column flex-md-row align-items-stretch">
-      
+
       <!-- Coluna Language -->
-      <div class="col-12 col-md-4 ps-md-5 mb-4 mb-md-0 d-flex flex-column order-md-1 animate-item" #animateItem>
+      <div class="col-12 col-md-4 ps-md-5 mb-4 mb-md-0 d-flex flex-column order-md-1" 
+          appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
+
         <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Language</p>
 
         <ul>
-          <li *ngFor="let language of languages" class="text-light fs-5 animate-item" #animateItem>
+          <li *ngFor="let language of languages; let i = index" class="text-light fs-5"
+              [style.transitionDelay]="i * 0.1 + 's'">
             {{language.type}}
           </li>
         </ul>
-
       </div>
 
+
       <!-- Divisor vertical -->
-      <div class="d-none d-md-flex col-md-1 justify-content-center order-md-2 animate-item" #animateItem>
+      <div class="d-none d-md-flex col-md-1 justify-content-center order-md-2" 
+           appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         <div class="bg-light" style="width:2px; height:100%;"></div>
       </div>
 
       <!-- Coluna Expertise -->
-      <div class="col-12 col-md-4 ps-md-5 d-flex flex-column order-md-3 animate-item" #animateItem>
+      <div class="col-12 col-md-4 ps-md-5 d-flex flex-column order-md-3" 
+           appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
         <p class="fs-4 bg-secondary px-5 py-1 rounded-4 text-light mb-4 text-center">Expertises</p>
 
         <ul>
-          <li *ngFor="let expertise of expertises" class="text-light fs-5 animate-item" #animateItem>
+          <li *ngFor="let expertise of expertises" class="text-light fs-5" 
+              appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2">
             {{expertise.type}}
           </li>
         </ul>
-
       </div>
 
     </div>
   </div>
 </section>
 
+
 <section class="mt-md-0 mt-5 py-5" id="contact">
   <div class="container text-light">
-    <h2 class="fw-bold fs-2 text-center mb-5 animate-item">
+    <h2 appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="fw-bold fs-2 text-center mb-5 animate-item">
       My <span class="text-primary">Habilities</span>
     </h2>
 
@@ -147,91 +183,143 @@
 
       <!-- Exemplo de item -->
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/flask-original.svg" class="img-fluid w-50" alt="Flask">
           <p class="m-0 fs-5 fw-bold skill-text">Flask</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/csharp-original.svg" class="img-fluid w-50" alt="C#">
           <p class="m-0 fs-5 fw-bold skill-text">C#</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/angularjs-original.svg" class="img-fluid w-50" alt="Angular">
           <p class="m-0 fs-5 fw-bold skill-text">Angular</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/javascript-original.svg" class="img-fluid w-50" alt="JavaScript">
           <p class="m-0 fs-5 fw-bold skill-text">JavaScript</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/python-original.svg" class="img-fluid w-50" alt="Python">
           <p class="m-0 fs-5 fw-bold skill-text">Python</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/html5-original.svg" class="img-fluid w-50" alt="HTML5">
           <p class="m-0 fs-5 fw-bold skill-text">HTML5</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/nodejs-original.svg" class="img-fluid w-50" alt="Node.js">
           <p class="m-0 fs-5 fw-bold skill-text">Node.js</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/dart-original.svg" class="img-fluid w-50" alt="Dart">
           <p class="m-0 fs-5 fw-bold skill-text">Dart</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/css3-original.svg" class="img-fluid w-50" alt="CSS3">
           <p class="m-0 fs-5 fw-bold skill-text">CSS3</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/typescript-original.svg" class="img-fluid w-50" alt="TypeScript">
           <p class="m-0 fs-5 fw-bold skill-text">TypeScript</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/dot-net-original.svg" class="img-fluid w-50" alt=".NET">
           <p class="m-0 fs-5 fw-bold skill-text">.NET</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/figma-original.svg" class="img-fluid w-50" alt="Figma">
           <p class="m-0 fs-5 fw-bold skill-text">Figma</p>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="p-3 bg-dark text-center skill-box">
+        <div class="p-3 bg-dark text-center skill-box"
+        appScrollAnimate 
+       [animationClass]="'fade-slide'" 
+       [threshold]="0.2"
+        >
           <img src="svgs/docker-original.svg" class="img-fluid w-50" alt="Docker">
           <p class="m-0 fs-5 fw-bold skill-text">Docker</p>
         </div>
@@ -241,13 +329,13 @@
   </div>
 </section>
 
-<section class="mt-3 text-light" style="background-color: #0E0E25; width: 100vw;" id="projects" #animateItem>
-  <div class="text-center mb-5 animate-item" #animateItem>
-    <h2 class="fw-bold fs-2">
+<section class="mt-3 pb-3 text-light" style="background-color: #0E0E25; width: 100vw;" id="projects">
+  <div appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="text-center mb-5 animate-item">
+    <h2 appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="fw-bold fs-2">
       My <span class="text-primary">Projects</span>
     </h2>
   </div>
-  <div class="row gy-4">
+  <div class="row gy-4 mx-5">
     <div class="col-12 col-md-6 col-lg-4" *ngFor="let project of projects; let i = index">
       <div class="project-card card bg-dark text-light h-100 shadow-sm rounded-4">
         <div class="card-body d-flex flex-column">
@@ -282,7 +370,7 @@
 
 <section class="mt-md-0 mt-5 py-5" id="contact">
   <div class="container text-light">
-    <h2 class="fw-bold fs-2 text-center mb-5 animate-item" #animateItem>
+    <h2 appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="fw-bold fs-2 text-center mb-5 animate-item">
       Get in <span class="text-primary">Touch</span>
     </h2>
 
@@ -298,13 +386,13 @@
 
         <div class="mt-4">
           <a href="mailto:matheuscomelli@hotmail.com" target="_blank" rel="noopener noreferrer" class="text-primary mx-3">
-            <i class="bi bi-envelope fs-2 github animate-item"></i>
+            <i appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="bi bi-envelope fs-2 github animate-item"></i>
           </a>
           <a href="https://github.com/koikera" target="_blank" rel="noopener noreferrer" class="text-primary mx-3">
-            <i class="bi bi-github fs-2 github animate-item"></i>
+            <i appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="bi bi-github fs-2 github animate-item"></i>
           </a>
           <a href="https://linkedin.com/in/matheuskoike" target="_blank" rel="noopener noreferrer" class="text-primary mx-3">
-            <i class="bi bi-linkedin fs-2 linkedin animate-item"></i>
+            <i appScrollAnimate [animationClass]="'fade-slide'" [threshold]="0.2" class="bi bi-linkedin fs-2 linkedin animate-item"></i>
           </a>
         </div>
       </div>
