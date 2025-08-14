@@ -82,3 +82,16 @@
   opacity: 1;
   overflow: visible;
 }
+
+.skill-box {
+  border-bottom: 10px solid #4E1AA2;
+  border-radius: 40px 0 0 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(78, 26, 162, 0.4);
+}
+.skill-text {
+  color: #7225ec;
+}

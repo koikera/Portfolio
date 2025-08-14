@@ -42,13 +42,19 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   ];
   public educations: Education[] = [
-    {
-        title: 'UNIP University - Brazil',
-        location: 'Brazil',
-        date: '2020 - 2022',
-        description: 'Associate degree in Systems Development Analyst'
-      }
-  ]
+  {
+    title: 'UNIP University',
+    location: 'Brazil',
+    date: '2020 - 2022',
+    description: 'Associate degree in Systems Development Analyst'
+  },
+  {
+    title: 'FIAP University',
+    location: 'Brazil',
+    date: '2023 - 2024',
+    description: 'MBA in Software Engineering with emphasis on software architecture, agile methodologies, cloud computing, and emerging technologies.'
+  }
+]
   public languages: Language[] = [
     {
       type: "Portuguese"
@@ -62,22 +68,28 @@ export class AppComponent implements OnInit, AfterViewInit {
   ]
   public expertises: Expertise[] = [
     {
-      type: "Experienced in optimizing processes to increase productivity and delivery speed"
+      "type": "Communication"
     },
     {
-      type: "Creativity"
+      "type": "Creativity"
     },
     {
-      type: "UX"
+      "type": "Negotiation"
     },
     {
-      type: "Negotiation"
+      "type": "Critical Thinking"
     },
     {
-      type: "Critical Thinking"
+      "type": "Leadership"
     },
     {
-      type: "Leadership"
+      "type": "Teamwork"
+    },
+    {
+      "type": "Adaptability"
+    },
+    {
+      "type": "Problem Solving"
     }
   ]
 

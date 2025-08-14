@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+	<title>angularjs-original</title>
+	<style>
+		.s0 { fill: #212529 } 
+		.s1 { fill: #6100ff } 
+		.s2 { fill: #4e1aa2 } 
+	</style>
+	<path class="s0" d="m63.8 1l-59.2 20.9 9.3 77.6 50 27.5 50.2-27.9 9.3-77.6z"/>
+	<path class="s1" d="m117.5 26l-53.8-18.4v112.8l45.1-25z"/>
+	<path class="s2" d="m11.2 26.3l8 69.5 44.5 24.6v-112.8z"/>
+	<path class="s0" d="m78.5 67.7l-14.8 6.9h-15.7l-7.3 18.4-13.7 0.2 36.7-81.5zm-1.5-3.5l-13.3-26.3-10.9 25.9h10.8z"/>
+	<path class="s0" d="m63.7 11.7l0.1 26.2 12.3 25.8h-12.4v10.9h17.2l8 18.6 13.1 0.3z"/>
+</svg>
