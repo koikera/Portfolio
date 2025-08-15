@@ -6,7 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 443:4200
+      - 4200:4200
     volumes:
       - ./Portfolio:/app
-    
