@@ -152,11 +152,12 @@ projects = [
   {
     title: 'Project One',
     techStack: [
-      { name: 'Angular', icon: 'devicon-angularjs-plain' },
+      { name: 'Angular', icon: 'devicon-angularjs-plain'},
       { name: 'Bootstrap', icon: 'devicon-bootstrap-plain' }
     ],
     description: 'A sleek portfolio site showcasing my skills and projects with responsive design and animations.',
-    link: 'https://github.com/username/project-one'
+    link: 'https://github.com/username/project-one',
+    img: 'projetos/Landing_page_curso.png' 
   },
   {
     title: 'Project Two',

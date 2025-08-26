@@ -47,13 +47,19 @@
 }
 
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(78, 26, 162, 0.4);
+.project-card .overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* tela escura */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
 }
 
 .project-icon {
